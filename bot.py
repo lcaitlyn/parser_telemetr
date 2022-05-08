@@ -8,7 +8,7 @@ from parcer import parse
 
 #URL = "https://telemetr.me/channels/?participants_to=10000"
 t_url = 'https://telemetr.me/channels/'
-token = '5356400211:AAEALKuF0Xm-fYvllYfz9r0inLWeNTJvEx4'
+token = 'your token from @botfather'
 bot = telebot.TeleBot(token)
 URL = ""
 
