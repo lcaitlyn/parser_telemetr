@@ -40,8 +40,9 @@ def get_content(html):
 
 def print_channels(channels, bot, message):
     for channel in channels:
-        mes = f'Название канала: ' + channel['title'] + '\nСсылка: ' + channel['link'] + '\nПодписчиков: ' + channel['subscribers'] + '\nПросмотров: ' + channel['eyes']
-        bot.send_photo(message.chat.id, channel['photo'], mes)
+        mes = f'✏️ Название канала: <b>' + channel['title'] + '</b>\n🔗 Ссылка: ' + channel['link'] + '\n🙎‍♂️ Подписчиков: <b>' + channel['subscribers'] + '</b>\n👀 Просмотров: <b>' + channel['eyes'] + '</b>'
+        bot.send_photo(message.chat.id, channel['photo'], mes, parse_mode='html')
+        
 
     
 
@@ -52,10 +53,10 @@ def parse(bot, message):
         channels = []
         pages_count = get_pages_count(html.text)
         for page in range(1, pages_count + 1):
-            bot.send_message(message.chat.id, 'Парсинг страницы ' + str(page) + '/' + str(pages_count))
+            bot.send_message(message.chat.id, '🔎 Парсинг страницы ' + str(page) + '/' + str(pages_count))
             html = get_html(URL, params={'page': page})
             channels.extend(get_content(html.text))
         print_channels(channels, bot, message)
-        bot.send_message(message.chat.id, 'Парсинг успешно завершен.\nСпаршено ' + str(len(channels)) + ' каналов')
+        bot.send_message(message.chat.id, '📊 Парсинг успешно завершен.\nСпаршено <b>' + str(len(channels)) + '</b> каналов', parse_mode='html')
     else:
-        bot.send_message(message.chat.id, 'Error: не удалось установить соединение с сайтом')
+        bot.send_message(message.chat.id, 'Ошибка: не удалось установить соединение с сайтом ❌')

@@ -31,7 +31,7 @@ def get_message(message):
     bot.send_message(message.chat.id, message.text, parse_mode='html')
 
 def get_url(message):
-    if 'https://telemetr.me/channels/' in message.text:
+    if message.text.find('https://telemetr.me/channels/', 0, 29) == 0:
         start_parse(message)
     else:
         bot.send_message(message.chat.id, "<b>Неверная ссылка!</b>\n"
@@ -41,7 +41,7 @@ def get_url(message):
 
 def start_parse(message):
     bot.register_next_step_handler(message, get_message)
-    bot.send_message(message.chat.id, 'Парсинг начался...')
+    bot.send_message(message.chat.id, '🕵️‍♂️ Парсинг начался...')
     parse(bot, message)
     
 
@@ -50,9 +50,10 @@ def callback_inline(call):
     if call.message:
         if call.data == 'start':
             bot.edit_message_text(text=call.message.text, chat_id=call.message.chat.id, message_id=call.message.message_id, reply_markup=None,)
-            bot.send_message(call.message.chat.id, 'Введите ссылку. Пример:\n'
-                + 'https://telemetr.me/channels/?participants_from=9999&participants_to=10000\n'
-                + 'https://telemetr.me/channels/?participants_to=10000')
+            bot.send_message(call.message.chat.id, '*Введите ссылку.*\nПример:\n'
+                + '1) `https://telemetr.me/channels/?participants_from=9999&participants_to=10000` (одна страница)\n'
+                + '2) `https://telemetr.me/channels/?participants_to=10000` (пять страниц)\n'
+                + '*Нажми на ссылку она скопируется*', parse_mode='Markdown')
             bot.register_next_step_handler(call.message, get_url)
         
 
