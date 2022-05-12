@@ -1,4 +1,4 @@
-# Parcer Telemetr Bot on python
+# Персер-телеграм бот на python [Parcer Telemetr Bot on python]
 
 Парсер сайта [Website Parser] https://telemetr.me/
 
