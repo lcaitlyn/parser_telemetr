@@ -14,21 +14,38 @@
 
 ### Создаём бота телеграм [Creating a Telegram bot]
 
+
+
 Открываем телеграм и ищем @botfather [Open telegram and search @botfather]
+
+
 
 ![](stickers/botfather.png)
 
+
+
+
 Запускаем BotFather и создаем нового бота [Start BotFather and creat a new bot]
 
+
+
 ![](stickers/create_bot.png)
+
+
 
 Переходим в папку [Go to the folder]:
 
 `cd parser_telemetr`
 
+
+
 Открываем bot.py и вставляем наш token [Open bot.py and put out token]
 
+
+
 ![](stickers/token.png)
+
+
 
 ## Запуск [Launch]
 
