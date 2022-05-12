@@ -42,6 +42,14 @@ cd parser_telemetr
 python3 bot.py
 ```
 
+Если выходит ошибка с токеном [If there is a token error]
+
+`https://api.telegram.org/bot<token>/setWebhook`
+
+Вместо "<token>" вставьте ваш токен (123456:ABCDEF)
+Instead of "<token>" insert your token (123456:ABCDEF)
+
+
 Открываем наш бот телеграм и нажимаем /start [Open bot in telegram and /start]
 
 ![](stickers/start.png)

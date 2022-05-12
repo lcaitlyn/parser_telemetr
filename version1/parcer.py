@@ -40,7 +40,10 @@ def get_content(html):
 
 def print_channels(channels, bot, message):
     for channel in channels:
-        mes = f'✏️ Название канала: <b>' + channel['title'] + '</b>\n🔗 Ссылка: ' + channel['link'] + '\n🙎‍♂️ Подписчиков: <b>' + channel['subscribers'] + '</b>\n👀 Просмотров: <b>' + channel['eyes'] + '</b>'
+        mes = f'✏️ Название канала: <b>'
+        + channel['title'] + '</b>\n🔗 Ссылка: <b>' + channel['link']
+        + '</b>\n🙎‍♂️ Подписчиков: <b>' + channel['subscribers']
+        + '</b>\n👀 Просмотров: <b>' + channel['eyes'] + '</b>'
         bot.send_photo(message.chat.id, channel['photo'], mes, parse_mode='html')
         
 
