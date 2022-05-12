@@ -8,7 +8,7 @@ import parser
 from parcer import parse
 
 
-token = 'put your token here'
+token = '5356400211:AAEALKuF0Xm-fYvllYfz9r0inLWeNTJvEx4'
 #token = '123567:ABCDEFD'  <- example
 
 bot = telebot.TeleBot(token)

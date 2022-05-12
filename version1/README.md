@@ -46,6 +46,12 @@ python3 bot.py
 
 ![](stickers/start.png)
 
+Ссылку можно получить на сайте, заполнив таблицу
+[The link can be obtained from the website by filling out the table]
+https://telemetr.me/channels/?order_column=views_per_post&order_direction=DESC
+
+![](stickers/search.png)
+
 ### Чтобы оставновить [How to stop]
 
 Ctrl + Z
