@@ -16,7 +16,7 @@
 
 Открываем телеграм и ищем @botfather [Open telegram and search @botfather]
 
-![](stickers/bothfather.jpg)
+![](stickers/botfather.jpg)
 
 Запускаем BotFather и создаем нового бота [Start BotFather and creat a new bot]
 
